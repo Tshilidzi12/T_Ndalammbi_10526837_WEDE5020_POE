@@ -61,4 +61,20 @@
 - Strucuture & Sematics used: sematic HTML tags- header- nav - main - footer
 - Styling Approach: basic CSS in style.CSS , no responsivness yet
 - Known limitations: JavaScript functions have not yet been added  will be added in part 2
+
+ ---
+
+ ## SiteMap
+
+ <img width="799" height="399" alt="SiteMap" src="https://github.com/user-attachments/assets/cba21ab1-f02e-4da5-b04c-7a09dc215c1e" />
+
+ ---
  
+ ## Changelog
+ 
+ | Date | Version | Change Description | Author |
+ | --- | --- | --- |
+ | 10/08/2026 | v1.0 | initial repository setup, added folder structur |
+ | 12/08/2026 | v1.1 | added index.htm and basic nevigation |
+ | 25/08/2026 | v1.3 | added intial style.css |
+
