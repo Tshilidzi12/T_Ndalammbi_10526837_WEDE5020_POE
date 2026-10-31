@@ -1,71 +1,260 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Baked Bunz|Home</title>
-</head>
-<meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="description" content="DESCRIPTION FROM THE LIST BELOW">
+    <title>Baked Bunz|Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+</head>
 <body>
+
 
 <!-- Header will have the site title and navigation -->
  <header>
-    <div class="site-title"Baked Bunz></div>
-    <nav>
+    <a href="index.html" class="brand">
+        <img src="images/BakedBunzLogo.png" alt="Baked Bunz Logo" class="logo">
+        <span class="site-title">Baked Bunz</span>
+    </a>
+    
+   <nav aria-label="Main navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutUs.html">About</a></li>
-            <li><a href="product.html">Products</a></li>
+            <li><a href="product.html" aria-current="page">Products</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="enquiry.html">Enquiry</a></li>
         </ul>
     </nav>
+
+    <button type="button" id="cart-toggle" class="cart-toggle" aria-controls="cart-panel " aria-expanded="false">
+        Cart(<span id="cart-count">0</span>)
+    </button>
  </header>
- <!-- the main contant will display here  abi=out the bakery -->
+ 
   <main>
     <section id="products-intro">
         <h1>Our Products</h1>
         <p>Take a look at some of our most popular and tastiest baked items</p>
 
     </section>
+    
+    <section id="product-tools">
+        <h2>Find Your Treat</h2>
+        
+            <div class="prodct-tools">
+                <div class="tool">
+                    <label for="product-search">Search</label>
+                    <input type="search" id="product-search" placeholder="e.g. choclate">
+                </div>
+                <div class="tool">
+                    <label for="category-filter">Category</label>
+                    <select id="category-filter">
+                        <option value="all">All Products</option>
+                        <option value="breads">Breads</option>
+                        <option value="pastries">Pastries</option>
+                        <option value="cakes">Cakes</option>
+                    </select>
+                </div>
+                <div class="tool">
+                    <label for="sort-products">Sort by</label>
+                    <select id="sort-products">
+                        <option value="default">Defualt</option>
+                        <option value="name">Name(A to Z)</option>
+                        <option value="price-low">Price(low to high)</option>
+                        <option value="price-high">Price(high to low)</option>
+                    </select>
+                </div>
+                <button type="button" id="reset-filters " class="reset-filters">Reset</button>
+            </div>
+            <p id="result-count" role="status" aria-live="polite"></p>
+            <p id="no-results" hidden>No product match your search. Try a diffrent word </p>
+        </div>
+    </section>
+    
     <section id="breads">
         <h2>Breads</h2>
-        <ul>
-            <li>SourDough Loaf</li>
-            <li>Whole Wheat Loaf</li>
-            <li>Rye Bread</li>
-            <li>Baguate</li>
+        <ul class="product-list">
+
+            <li class="product-card" data-id="sourdough" data-name="SourDough Loaf" data-price="45">
+                <img src="./images/sourDough.jpg" alt="sourDough bread image">
+                <span class="product-name">Sourdough loaf</span>
+                <span class="product-price ">R45.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+
+
+            <li class="product-card" data-id="wholewheat" data-name="WholeWheat Bread" data-price="20">
+                <img src="./images/wholeWheat.jpg"alt="wholeWheat" >
+                 <span class="product-name">WholeWheat </span>
+                <span class="product-price ">R20.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+            
+            
+
+
+            <li class="product-card" data-id="ryebread" data-name="Rye Bread"data-price="55">
+                <img src="./images/ryeBread.jpg" alt="ryebread image"> 
+                 <span class="product-name">RyeBread</span>
+                <span class="product-price ">R55.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+            </li>
+
+
+            <li class="product-card" data-id="baguate" data-name="Baguate" data-price="45">
+                <img src="./images/baguet.jpg" alt="Baguate image">
+                 <span class="product-name">Baguate</span>
+                <span class="product-price ">R45.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
         </ul>
     </section>
 
     <section id="pastries">
         <h2>Pastries</h2>
-        <ul>
-            <li>Muffins </li>
-            <li>Scones</li>
-            <li>CupCakes</li>
-            <li>Macrons</li>
-            <li>Biscuits</li>
-            <li>Chou a la creme</li>
-            <li>Cinemon Roles</li>
+        <ul class="product-list">
+
+            <li class="product-card" data-id="muffin" data-name="Muffin" data-price="5">
+                <img src="./images/Muffins.jpg" alt="muffin img">
+               
+                 <span class="product-name">Muffin</span>
+                <span class="product-price ">R5.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+                
+
+
+            <li class="product-card" data-id="scone" data-name="Scones" data-price="5">
+                <img src="./images/scones.jpg" alt="scone img">
+         
+                 <span class="product-name">Scones</span>
+                <span class="product-price ">R5.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+
+
+            <li class="product-card" data-id="cupcake" data-name="CupCake" data-price="6">
+                <img src="./images/cupcakes.jpg" alt="img cupcake">
+                <span class="product-name">CupCake</span>
+                <span class="product-price ">R6.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+
+
+            <li class="product-card" data-id="macrons "data-name="Macrons" data-price="12">
+                <img src="./images/macrons.jpg">
+                <span class="product-name">Macrons</span>
+                <span class="product-price ">R12.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+
+
+            <li class="product-card" data-id="biscuit" data-name="Biscuits" data-price="4">
+                <img src="./images/biscuits.jpg">
+                <span class="product-name">Biscuits</span>
+                <span class="product-price ">R4.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+
+
+            <li class="product-card" data-id="chou a la creme" data-name="Chou a la creme" data-price="18">
+                <img src="./images/Chou a la creme.jpg">
+                <span class="product-name">Chou a la creme</span>
+                <span class="product-price ">R18.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+
+
+            <li class="product-card" data-id="cinnemon roles" data-name="Cinemon Roles" data-price="25">
+                <img src="images/CinnemonRoles.jpg">
+                <span class="product-name">Cinemon Roles</span>
+                <span class="product-price ">R25.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
         </ul>
     </section>
     <section id="cakes">
         <h2>Cakes</h2>
-        <ul>
-            <li>Choclate Cake</li>
-            <li>Carrot Cake</li>
-            <li>Sponge Cake</li>
-            <li>Chiffon Cake</li>
-            <li>Fruit Cake</li>
-            <li>Tiramisu Cake</li>
-            <li>Custom Order(order in advanced)</li>
+        <ul class="product-list">
+            
+            <li class="product-card" data-id="choclate cake" data-name="ChoclateCake" data-price="200">
+                <img src="./images/choclate cake.jpg">
+                <span class="product-name">Choclate Cake</span>
+                <span class="product-price ">R200.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+
+            <li class="product-card" data-id="carrot cake" data-name="Carrot Cake" data-price="250">
+                <img src="./images/carrotCake.jpg">
+                <span class="product-name">Carrot Cake</span>
+                <span class="product-price ">R250.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+
+            <li class="product-card" data-id="songe cake" data-name="SpongeCake" data-price="400">
+                <img src="./images/Sponge cake.jpg">
+                <span class="product-name">Sponge Cake</span>
+                <span class="product-price ">R400.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+
+            <li class="product-card" data-id="chiffon cake" data-name="Ciffone cake" data-price="560">
+                <img src="./images/Chiffon cake.jpg">
+                <span class="product-name">Chiffon Cake</span>
+                <span class="product-price ">R560.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+
+            <li class="product-card" data-id="fruit cake" data-name="Fruit Cake" data-price="340">
+                <img src="images/Fruit cake.jpg">
+                <span class="product-name">Fruit Cake</span>
+                <span class="product-price ">R340.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+
+            <li class="product-card" data-id="tiramisu" data-name="Tiramisu" data-price="400">
+                <img src="./images/Tiramisu cake.jpg">
+                <span class="product-name">Tiramisu</span>
+                <span class="product-price ">R400.00</span>
+                <button type="button" class="add-to-cart">Add to Cart</button>
+            </li>
+            
         </ul>
+
+        <section id="made-to-order">
+            <h2>Make a Custom cake to your liking</h2>
+            <a href="enquiry.html">Enquiry  </a>
+        </section>
 
     </section>
   </main>
   <!-- footer with copyright -->
+   <div id="cart-overlay" class="cart-overlay" hidden></div>
+   <aside id="cart-panel" class="cart-panel" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button type="button" id="cart-close" class="cart-close" aria-label="Close cart">&times;</button>
+    </div>
+    <ul id="cart-items" class="cart-items"></ul>
+    <p id="cart-empty" class="cart-empty">Your cart is empty.</p>
+    <div class="cart-footer">
+        <p class="cart-total">Total: <strong id="cart-total">R0.00</strong></p>
+        <button type="button" id="checkout-btn" class="checkout-btn">Place Order</button>
+        <button type="button" id="clear-cart" class="clear-cart">Clear Cart</button>
+        <p id="cart-message" class="cart-message" role="status" aria-live="polite"></p>
+    </div>
+</aside>
+
    <footer>
     <p>&copy;2026 BakedBunz. All rights reserved.</p>
    </footer>
+   <script src="./js/cart.js"></script>
 </body>
 </html>
 

@@ -1,20 +1,30 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8"/>
+    <meta name="description" content="DESCRIPTION FROM THE LIST BELOW">
+    <title>Baked Bunz|Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Baked Bunz|Home</title>
 </head>
 <body>
 
 <!-- Header will have the site title and navigation -->
  <header>
-    <div class="site-title"Baked Bunz></div>
+    <a href="index.html" class="brand">
+        <img src="images/BakedBunzLogo.png" alt="Baked Bunz Logo" class="logo">
+        <span class="site-title">Baked Bunz</span>
+    </a>
     <nav>
-        <ul>
+         
+        <ul aria-label="Main navigation">
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutUs.html">About</a></li>
             <li><a href="product.html">Products</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
             <li><a href="enquiry.html">Enquiry</a></li>
         </ul>
     </nav>
@@ -23,29 +33,77 @@
   <main>
     <section id="contact-details">
         <h1>Contact Us</h1>
-        <p><strong>Address</strong>15 Great wide Avenue newWood Johannesburg</p>
-        <p><strong>Phone</strong>0786899684</p>
-        <p><strong>Email</strong>Infow@BakedBun.co.za/p>
-        <p><strong>operating Hours</strong>mon-sat,6:00-15:00</p>   
+        <p><strong>Address</strong>15 Great Wide Avenue, NewWood, Johannesburg</p>
+        <p><strong>Phone</strong><a href="tel:+27786899684">078 689 9684</a></p>
+        <p><strong>Email</strong><a href="mailto:info@bakedbunz.co.za">info@bakedbunz.co.za</a></p>
+        <p><strong>Operating Hours</strong>MON&ndash;SAT,  6:00&ndash;15:00</p>   
     </section>
+    
     <section id="contact-form">
-        <h2>Send Us A Message</h2>
-        <form id="contactForm"action ="#"method="post">
-            <label for="email">Email Address</label>
-            <input type="email" id="email"name="email" required>
+        <h2>Send Us a Message</h2>
+        <form id="contactForm" action="#" method="post" novalidate>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required minlength="2" autocomplete="name" aria-describedby="name-error">
+            <span id="name-error" class="field-error"></span>
 
             <label for="email">Email Address</label>
-            <textarea id ="message" name="message" rows="5" required></textarea>
+            <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error">
+            <span id="email-error" class="field-error"></span>
 
-            <button type="submit">Send Message</button>
-            
-        </form>
+            <label for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. 078 123 4567" autocomplete="tel" aria-describedby="phone-error">
+            <sp id="phone-error" class="field-error"></sp    an>
+
+            <label for="type">Type of Message</label>
+            <select id="type" name="type" required aria-describedby="type-error">
+                <option value="">-- Please choose --</option>
+                <option value="General question">General question</option>
+                <option value="Feedback or compliment">Feedback or compliment</option>
+                <option value="Complaint">Complaint</option>
+                <option value="Order or delivery">Order or delivery</option>
+        </select>
+        <span id="type-error" class="field-error"></span>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="500" aria-describedby="message-error"></textarea>
+        <span id="message-counter" class="char-counter">0 / 500</span>
+        <span id="message-error" class="field-error"></span>
+
+        <button type="submit">Prepare Email</button>
+    </form>
+
+    <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+
+    <div id="email-preview-box" class="email-box" hidden>
+        <h3>Your email is ready</h3>
+        <pre id="email-preview"></pre>
+        <a id="send-email-link" class="button-link" href="#">Open in my email app</a>
+    </div>
+  </section>
+
+  <section id="map-section">
+    <h2>Find US</h2>
+    <div id="map" role="region" aria-label="map showing location of bakery"></div>
+  </section>
+
+    <section id="socials">
+        <h2>Find out more on our socails</h2>
+        <ul class="social-links">
+
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-snapchat"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        </ul>
     </section>
   </main>
   <!-- footer with copyright -->
    <footer>
     <p>&copy;2026 BakedBunz. All rights reserved.</p>
    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="./js/cart.js"></script>
 </body>
 </html>
 
