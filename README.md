@@ -67,7 +67,7 @@
  - Styling and the Designing of visuals were done 
  - Used Css styling to creat topography and give the webiste color and vibrancy
  - navigation was improved upon making it easier to read and navigate the website due to adding    visual indicators of links
- -  
+   
  ---
  ## Part 3 Details
  - 
@@ -84,7 +84,7 @@
  ## Changelog
  
  | Date | Version | Change Description | Author |
- | --- | --- | --- |
+ | st10526837 | Tshilidzi  | Ndalammbi |
  | 10/08/2026 | v1.0 | initial repository setup, added folder structur |
  | 12/08/2026 | v1.1 | added index.htm and basic nevigation |
  | 25/08/2026 | v1.3 | added intial style.css |
