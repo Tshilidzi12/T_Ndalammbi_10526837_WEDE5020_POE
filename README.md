@@ -47,10 +47,10 @@
 | --- | --- | --- |
 | Planning & WireFrame | 05/08/2026 | Complete |
 | Part 1: Summative Proposal and Sematic HTML Structure | 14/08/2026 | Complete |
-| Add External CSS styling and responsiveness| 16/09/2026 | Ongoing |
-| Part 2: Submit CSS and Responsiveness to Website | 18/09/2026 | Planned |
-|Adding Java Script and interactivity | TBC | Planned |
-| Part 3: Final Testing and Submission | TBC | Planned|
+| Add External CSS styling and responsiveness| 16/09/2026 | 24/9/2026 | Completed |
+| Part 2: Submit CSS and Responsiveness to Website | 30/09/2026 | Completed |
+|Adding Java Script and interactivity | 01/11/2026| Completed |
+| Part 3: Final Testing and Submission | 02/11/2026 | Completed|
 
 ---
 
@@ -61,6 +61,17 @@
 - Strucuture & Sematics used: sematic HTML tags- header- nav - main - footer
 - Styling Approach: basic CSS in style.CSS , no responsivness yet
 - Known limitations: JavaScript functions have not yet been added  will be added in part 2
+
+ ---
+ ## Part 2 Details
+ - Styling and the Designing of visuals were done 
+ - Used Css styling to creat topography and give the webiste color and vibrancy
+ - navigation was improved upon making it easier to read and navigate the website due to adding    visual indicators of links
+ -  
+ ---
+ ## Part 3 Details
+ - 
+ -
 
  ---
 
