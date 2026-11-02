@@ -67,6 +67,8 @@
  - Styling and the Designing of visuals were done 
  - Used Css styling to creat topography and give the webiste color and vibrancy
  - navigation was improved upon making it easier to read and navigate the website due to adding    visual indicators of links
+ - added images so users can see the offered product
+ - improved website structure 
    
  ---
  ## Part 3 Details
