@@ -70,8 +70,23 @@
    
  ---
  ## Part 3 Details
- - 
- -
+ - Created a product list that is used in the homepage to show daily specials for the user
+
+ - added email check to ensure when user add their email correct formatting is used  
+ - added email check to ensure when user add their email correct formatting is used
+ - added a field that would show a error message when field has no data or incorrect formatting
+ - added code to tell the current year for the footer and to show the current time so the visitor knows if they can visit the store or not  and for a greating depending on the time of day
+ - added back to top button to take users back to the top of the page
+ - added common asked question and when they are clicked a answer will be provided to the user
+ - addad a shoping cart so users can order multiple produts all at once and added a clear shoping cart buttonand a add and remove button on the cart
+ -  added a place order button
+ - click a picture to make it bigger
+ - added a filter and specific search to look for a exact product and product type e.g. Cakes only
+ - alow users to send email and insure each field has data enterd in a correct manner
+
+
+
+
 
  ---
 
