@@ -1,8 +1,5 @@
 
 
-/* 
-   1. DATA AND HELPERS
-    */
 
 // The product list (used by the home page specials and the enquiry form).
 
@@ -155,9 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* 
-       2. EVERY PAGE
-       */
 
     // Footer: current year
     function updateFooterYear() {
@@ -228,9 +222,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* 
-       3. HOME PAGE
-      */
 
     // Greeting that depends on the time of day
     function showGreeting() {
@@ -287,10 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-
-    /* 
-       4. ABOUT PAGE
-        */
+//About Page
 
     //  click a question to open its answer
     function setupAccordion() {
@@ -316,15 +304,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
-    /* 
-       5. PRODUCTS PAGE
-       */
+//Products page
 
     // ----- shopping cart (kept in localStorage so it survives a refresh) -----
     function setupCart() {
         var cartToggle = document.getElementById("cart-toggle");
-        if (!cartToggle) return;   // this page has no cart
+        if (!cartToggle) return;   
 
         var STORAGE_KEY = "bakedBunzCart";
 
@@ -355,7 +340,6 @@ document.addEventListener("DOMContentLoaded", function () {
             try {
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
             } catch (e) {
-                // storage unavailable - the cart still works for this visit
             }
         }
 
@@ -711,44 +695,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+//Contact page
 
-    /* 
-       6. CONTACT PAGE
-     */
-
-    // Interactive map 
-    function setupMap() {
-        var mapElement = document.getElementById("map");
-        if (!mapElement) return;
-
-        // If the Leaflet library did not load (e.g. no internet), say so politely.
-        if (typeof L === "undefined") {
-            mapElement.textContent = "The map could not be loaded. Our address is shown above.";
-            return;
-        }
-
-        
-        var position = [-26.2041, 28.0473];
-
-        var map = L.map("map").setView(position, 14);
-
-        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            maxZoom: 19,
-            attribution: "&copy; OpenStreetMap contributors"
-        }).addTo(map);
-
-        L.marker(position)
-            .addTo(map)
-            .bindPopup("<strong>Baked Bunz</strong><br>15 Great Wide Avenue, NewWood<br>Mon–Sat, 06:00–15:00")
-            .openPopup();
-    }
 
     // Contact form: validates, then builds an email the visitor can send
     function setupContactForm() {
         var form = document.getElementById("contactForm");
         if (!form) return;
 
-        var RECIPIENT = "info@bakedbunz.co.za";   // where the email will be sent
+        var RECIPIENT = "info@bakedbunz.co.za";   
         var MAX_LENGTH = 500;
 
         var nameField = document.getElementById("name");
@@ -838,10 +793,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-
-    /*
-       7. ENQUIRY PAGE
-       */
+//enquiry page
 
     function setupEnquiryForm() {
         var form = document.getElementById("enquiryform");
@@ -932,7 +884,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 var chosen = new Date(value + "T00:00:00");
                 var today = new Date();
                 today.setHours(0, 0, 0, 0);
-                var daysAway = Math.round((chosen - today) / 86400000);   // milliseconds in a day
+                var daysAway = Math.round((chosen - today) / 86400000);   
 
                 if (daysAway < 1) return "Please choose a date from tomorrow onwards.";
                 if (chosen.getDay() === 0) return "We are closed on Sundays. Please pick another day.";
